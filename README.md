@@ -35,4 +35,4 @@ To run the project locally, follow these steps:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/portfolio-webpage.git
+   git clone https://github.com/Tarun-Seeram/portfolio_private.git
