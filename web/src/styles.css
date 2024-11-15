@@ -1,0 +1,368 @@
+/* Basic reset and styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+   background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.125)),
+                url('5590457.jpg');
+  opacity : 75%;
+
+
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+/* Hide horizontal scrollbar */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Header Styling */
+.header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a2730;
+
+  color: #f5f5f5;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.animated-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FF5F15;
+  animation: trending 3s ease infinite;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Header Icons Styling */
+.nav-links {
+  display: flex;
+  gap: 25px; /* Increased spacing between icons */
+}
+
+.nav-links a {
+  color: #f5f5f5;
+  font-size: 1.5rem; /* Slightly increased size */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #FF5F15;
+  transform: scale(1.3);
+
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a1a1a;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+.dropdown-content a {
+  color: #f5f5f5;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+  transform: scale(1.07);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 2;
+  }
+}
+
+/* Typing Effect for About Me Text */
+.typing-animation {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #f5f5f5;
+  overflow: hidden;
+  border-right: .1em solid #FF5F15;
+  white-space: nowrap;
+  margin: 0 auto;
+  width: 0;
+  animation: typing 3s steps(30) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+/* Section Headings */
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #FF5F15;
+  text-align: center;
+  animation: fill-text 1s ease-out;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Education Table Styling */
+.education-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0.2px auto;
+  border-collapse: collapse;
+  border: 2px solid #FF5F15;
+}
+
+.education-table th, .education-table td {
+  padding: 15px;
+  border: 0.5px solid #FF5F15;;
+  text-align: left;
+}
+
+.education-table th {
+  background-color: #333;
+}
+
+/* Skills Section Styling */
+.skills-grid {
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-box {
+  background: #1a1a1a;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s, border 0.3s;
+  height: 150px;
+  position: relative;
+}
+
+.skill-box img {
+  width: 75px;
+  height: 65px;
+  margin-bottom: 10px;
+}
+
+.skill-box:hover {
+  transform: scale(1.09);
+  color: #FF5F15;
+  border: 2px solid #FF5F15;
+}
+
+/* Project Section Styling */
+.project-grid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.project-box {
+  background: #1a1a1a;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s, border 0.3s;
+  height: 150px;
+  position: relative;
+}
+
+.project-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.project-box:hover {
+  transform: scale(1.09);
+  color: #FF5F15;
+  border: 2px solid #FF5F15;
+}
+
+/* Download Resume Button */
+.download-btn {
+  background-color: black;
+  color: #FF5F15;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #FF5F15;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.7s ease;
+}
+
+.download-btn:hover {
+  background-color: #FF5F15;
+  color: black;
+}
+
+.download-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 95, 21, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: revolving 2s linear infinite;
+}
+
+@keyframes revolving {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 200%;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    width: 300%;
+  }
+}
+
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.full-screen-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+}
+
+.section + .section {
+  margin-top: 60px;
+}
+
+.footer {
+  background-color: #1a2730;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+/* Dropdown Menu */
+.dropdown-content a {
+  color: #f5f5f5;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  color: #FF5F15;
+}
+
+
+/* Fade-in Animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
